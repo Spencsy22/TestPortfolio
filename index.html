@@ -27,20 +27,24 @@
 
             <section aria-labelledby="portfolio-heading">
                 <h2 id="portfolio-heading">This is an example portfolio section</h2>
-                <article aria-labelledby="project-heading">
-                    <h3 id="project-heading">Example Project</h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg" alt="Cat">
-                    <p>Steps or lessons or somethin</p>
-                </article>
+                <div class="project-grid">
+                    <article class="project-card" aria-labelledby="project-heading">
+                        <img class="project-card-image" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg" alt="Cat">
+                        <div class="project-card-content">
+                            <h3 id="project-heading">Example Project</h3>
+                            <p>Steps or lessons or somethin</p>
+                        </div>
+                    </article>
+                </div>
             </section>
 
             <section aria-labelledby="skills-heading">
                 <h2 id="skills-heading">Example skills section</h2>
                 <ol>
-                    <li>All</li>
-                    <li>Types</li>
-                    <li>Of</li>
-                    <li>Shit</li>
+                    <li><span class="skill-icon" aria-hidden="true">&#x1F680;</span> All</li>
+                    <li><span class="skill-icon" aria-hidden="true">&#x1F3A8;</span> Types</li>
+                    <li><span class="skill-icon" aria-hidden="true">&#x26A1;</span> Of</li>
+                    <li><span class="skill-icon" aria-hidden="true">&#x1F6E0;&#xFE0F;</span> Shit</li>
                 </ol>
             </section>
 
