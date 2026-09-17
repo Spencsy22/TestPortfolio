@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A generic portfolio website for my WebDev class">
+
+        <title>Portfolio Page</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+
+        <header>
+            <h1>My Portfolio Website</h1>
+        </header>
+
+        <main id="main-content" tabindex="-1">
+            <section aria-labelledby="about-heading">
+                <h2 id="about-heading">Welcome to my portfolio website</h2>
+                <p id="aboutMe">This is an example about me section using semantic html elements to organize content</p>
+            </section>
+
+            <section aria-labelledby="portfolio-heading">
+                <h2 id="portfolio-heading">This is an example portfolio section</h2>
+                <article aria-labelledby="project-heading">
+                    <h3 id="project-heading">Example Project</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg" alt="Cat">
+                    <p>Steps or lessons or somethin</p>
+                </article>
+            </section>
+
+            <section aria-labelledby="skills-heading">
+                <h2 id="skills-heading">Example skills section</h2>
+                <ol>
+                    <li>All</li>
+                    <li>Types</li>
+                    <li>Of</li>
+                    <li>Shit</li>
+                </ol>
+            </section>
+
+            <section aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Contact me</h2>
+                <p id="form-instructions">All fields are required. Enter a valid email address, such as name@example.com.</p>
+                <form action="submit" method="post" aria-labelledby="contact-heading" aria-describedby="form-instructions">
+                    <label for="name">Name (required):</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                    <br>
+                    <label for="email">Email (required):</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <br>
+                    <label for="message">Message (required):</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>This is an example footer for the webpage. COPYRIGHT - SUM</footer>
+    </body>
+
+</html>

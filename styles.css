@@ -1,0 +1,43 @@
+/* Keep the skip link available to keyboard users without taking up layout space. */
+.skip-link {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 1;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    background: #111;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+}
+
+/* Allow images and form controls to fit when the page is zoomed. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+textarea,
+button {
+    box-sizing: border-box;
+    max-width: 100%;
+    font: inherit;
+}
+
+input,
+button {
+    min-height: 2.75rem;
+}
+
+textarea {
+    min-height: 6rem;
+}
