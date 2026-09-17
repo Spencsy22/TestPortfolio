@@ -10,6 +10,7 @@
         <title>Portfolio Page</title>
 
         <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
     </head>
 
     <body>
@@ -29,10 +30,14 @@
                 <h2 id="portfolio-heading">This is an example portfolio section</h2>
                 <div class="project-grid">
                     <article class="project-card" aria-labelledby="project-heading">
-                        <img class="project-card-image" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg" alt="Cat">
+                        <img id="project-image" class="project-card-image project-card-detail" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg" alt="Cat">
                         <div class="project-card-content">
-                            <h3 id="project-heading">Example Project</h3>
-                            <p>Steps or lessons or somethin</p>
+                            <h3 id="project-heading">
+                                <button class="project-card-toggle" type="button" aria-expanded="true" aria-controls="project-image project-description">
+                                    Example Project <span class="project-card-indicator" aria-hidden="true">−</span>
+                                </button>
+                            </h3>
+                            <p id="project-description" class="project-card-detail">Steps or lessons or somethin</p>
                         </div>
                     </article>
                 </div>
@@ -51,15 +56,19 @@
             <section aria-labelledby="contact-heading">
                 <h2 id="contact-heading">Contact me</h2>
                 <p id="form-instructions">All fields are required. Enter a valid email address, such as name@example.com.</p>
-                <form action="submit" method="post" aria-labelledby="contact-heading" aria-describedby="form-instructions">
+                <form id="contact-form" action="submit" method="post" aria-labelledby="contact-heading" aria-describedby="form-instructions">
+                    <p id="form-errors" class="form-error-summary" role="alert" aria-atomic="true"></p>
                     <label for="name">Name (required):</label>
-                    <input type="text" id="name" name="name" autocomplete="name" required>
+                    <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error" required>
+                    <p id="name-error" class="field-error" hidden></p>
                     <br>
                     <label for="email">Email (required):</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" required>
+                    <p id="email-error" class="field-error" hidden></p>
                     <br>
                     <label for="message">Message (required):</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" aria-describedby="message-error" required></textarea>
+                    <p id="message-error" class="field-error" hidden></p>
                     <br>
                     <button type="submit">Submit</button>
                 </form>
